@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if [ -z "$DOCKER_ACCOUNT" ]; then
     DOCKER_ACCOUNT=ajeshgeorge22
 fi;
