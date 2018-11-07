@@ -85,13 +85,13 @@ spec:
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: dashboard
+  name: hystrix-dashboard
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: dashboard
+        app: hystrix-dashboard
     spec:
       containers:
       - name: dashboard-container
@@ -102,13 +102,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dashboard
+  name: hystrix-dashboard
 spec:
   type: LoadBalancer
   ports:
   - port: 8080
   selector:
-    app: dashboard
+    app: hystrix-dashboard
 ---
 apiVersion: apps/v1beta1
 kind: Deployment
